@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class Client {
 
-    public static void main(String[] args) throws IOException {
+    public Client (String address, int port) throws IOException {
         int number, temp;
 
         Scanner sc = new Scanner(System.in);
-        Socket s = new Socket("127.0.0.1", 5000);
+        Socket s = new Socket(address, port); //IP-address of server, port of server
         Scanner sc1 = new Scanner(s.getInputStream());
 
         System.out.println("Enter a number: ");
@@ -22,5 +22,9 @@ public class Client {
 
         temp = sc1.nextInt();
         System.out.println(temp);
+    }
+
+    public static void main(String[] args) throws IOException {
+        Client client = new Client("127.0.0.1", 5000);
     }
 }

@@ -8,11 +8,10 @@ import java.util.Scanner;
 
 public class Server {
 
-    public static void main(String[] args) throws IOException {
-
+    public Server(int port) throws IOException {
         int number, temp;
 
-        ServerSocket s1 = new ServerSocket(5000);
+        ServerSocket s1 = new ServerSocket(port);
         Socket ss = s1.accept();
         Scanner sc = new Scanner(ss.getInputStream());
         number = sc.nextInt();
@@ -21,5 +20,10 @@ public class Server {
 
         PrintStream p = new PrintStream(ss.getOutputStream());
         p.println(temp);
+    }
+
+    public static void main(String[] args) throws IOException {
+        Server server = new Server(5000);
+
     }
 }
