@@ -11,9 +11,11 @@ public class MultiThreadClient {
             DataInputStream dataIn = new DataInputStream(socket.getInputStream());  //Input
             DataOutputStream dataOut = new DataOutputStream(socket.getOutputStream());  //Output
             while(true){    //Deze loop zal info tussen client en client handler uitwisselen...
-                System.out.println(dataIn.readUTF());   //UTF is een manier van codering om bytes door te streamen...
+                System.out.println(dataIn.readUTF());   //UTF is een manier van codering om bytes do or te streamen...
                 String toSend = scanny.nextLine();
+                System.out.println("Number to send: " + toSend);
                 dataOut.writeUTF(toSend);
+                System.out.println("Sending: "+dataOut);
                 if (toSend.equals("Exit")){ //Als men Exit typt zal men de connectie sluiten
                     System.out.println("Closing this connection: "+ socket);
                     socket.close();
