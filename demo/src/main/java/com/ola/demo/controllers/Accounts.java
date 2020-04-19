@@ -1,9 +1,12 @@
 package com.ola.demo.controllers;
 
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
 
 public class Accounts {
     private ArrayList<Account> accounts = new ArrayList<>();
+    private Semaphore addAcc=new Semaphore(1);
+    private Semaphore deleteAcc=new Semaphore(1);
     public Accounts(){
         accounts.add(new Account("Caitlin", 100));
         accounts.add(new Account("Guido", 100));
@@ -32,10 +35,27 @@ public class Accounts {
         }
     }
 
-    public void addAccount(String Id){
-        accounts.add(new Account(Id, 0));
-    }
-    public void deleteAccount(String Id){
+    public void addAccount(String Id) throws InterruptedException {
+        addAcc.acquire();
+        System.out.println(Id);
+        boolean lel=false;
+        for (Account acc : accounts) {
+            System.out.println(acc.getId());
+            if (Id.equals(acc.getId())) {
+                lel = true;
+            }
+        }
+            if(!lel) {
+                accounts.add(new Account(Id, 0));
+            }else{
+                System.out.println("account already taken");
+            }
+            addAcc.release();
+        }
+
+    public void deleteAccount(String Id) throws InterruptedException {
+        deleteAcc.acquire();
         accounts.removeIf(acc -> acc.getId().equals(Id));
+        deleteAcc.release();
     }
 }
