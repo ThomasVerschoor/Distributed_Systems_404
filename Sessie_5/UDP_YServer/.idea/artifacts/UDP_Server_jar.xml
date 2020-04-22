@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="UDP_Server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/UDP_Server_jar</output-path>
+    <root id="root">
+      <element id="archive" name="UDP_Server.jar">
+        <element id="module-output" name="UDP_Server" />
+      </element>
+    </root>
+  </artifact>
+</component>
