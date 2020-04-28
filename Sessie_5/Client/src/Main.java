@@ -139,6 +139,9 @@ public class Main {
     public static void unicast(String message, String IP) {
         System.setProperty("java.net.preferIPv4Stack", "true");     //ipv4 gebruiken
         try{
+            //wait 10 ms so that data is certainly read by receiving side
+            TimeUnit.SECONDS.sleep(1);
+
             InetAddress address = InetAddress.getByName(IP);
             DatagramSocket socket = new DatagramSocket(); //create new socket
             System.out.println("message sent");
