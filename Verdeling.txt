@@ -1,0 +1,17 @@
+Deel 1: Thomas
+-Introduction: 4 pagina's
+-Timestamp ordering: 7 pagina's
+
+Deel 2: Bilal
+-Transaction: 11 pagina's
+
+Deel 3: Liam
+-Locks: 14 pagina's
+
+Deel 4: Mathijs
+-Optimistic concurrency control: 5 pagina's
+-Comparison of methods for concurrency control: 3 pagina's
+
+
+Deel 5: Jorre
+-Nested transactions: 3 pagina's
