@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="Sessie_5_Client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Sessie_5_Client_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Sessie_5_Client.jar">
+        <element id="module-output" name="Sessie_5_Client" />
+      </element>
+    </root>
+  </artifact>
+</component>
