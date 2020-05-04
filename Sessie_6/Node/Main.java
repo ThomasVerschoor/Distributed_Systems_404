@@ -32,10 +32,10 @@ public class Main {
             System.out.println("file: " +file.getFilename()+ ", with hash: " +file.getHash());
 
             //Report hash of file to naming server
-            send(String.valueOf(file.getHash()));
+            sendMessage(String.valueOf(file.getHash()));
 
             //Receive info on replicated node
-            String IP = receive();
+            String IP = receiveMessage();
 
             //Send file to replicated node
             System.out.println("The replicated node of file " +file.getFilename()+ " is, node with IP " +IP+ ".");
@@ -49,17 +49,12 @@ public class Main {
 
             List<String> result = walk.filter(Files::isRegularFile).map(x -> x.toString()).collect(Collectors.toList());
 
-            //remove full directory, so that only the filename remains and add to "fileList"
+            //add file to arraylist
             for (String x : result) {
-                x = x.replaceAll("[\\/|\\\\|\\*|\\:|\\||\"|\'|\\<|\\>|\\{|\\}|\\?|\\%|,]",
-                        "");
-
-                String[] parts = x.split("nodeFiles"); //add directory name here
-                String file = parts[1];
-                fileList.add(file);
-
+              fileList.add(x);
             }
 
+            //return arraylist
             return fileList;
 
         } catch (IOException e) {
@@ -69,8 +64,19 @@ public class Main {
         return null;
     }
 
+    public static void receiveFiles() throws IOException {
+        //ServerSocket s = new ServerSocket(9996);
+        //Socket socket = s.accept(); // blocking call, this will wait until a connection is attempted on this port.
 
-    public static void send(String hash) throws IOException {
+        //FileInputStream fileInputStream = new FileInputStream();
+
+    }
+
+    public static void sendFiles() {
+
+    }
+
+    public static void sendMessage(String hash) throws IOException {
         Socket s = new Socket(("127.0.0.1"), 9999); //IP-address of server, port of server
         //get output stream from socket
         OutputStream outputStream = s.getOutputStream();
@@ -86,7 +92,7 @@ public class Main {
         s.close();
     }
 
-    public static String receive() throws IOException {
+    public static String receiveMessage() throws IOException {
         ServerSocket s = new ServerSocket(9998);
         //System.out.println("ServerSocket awaiting connections...");
         Socket socket = s.accept(); // blocking call, this will wait until a connection is attempted on this port.
