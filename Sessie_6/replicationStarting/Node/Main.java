@@ -18,6 +18,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // write your code here
 
+        Node thisnode = new Node("Mathijs", "192.");
+
         //STARTING NODE
         //BOOTSTRAP/DISCOVERY
 
@@ -46,28 +48,51 @@ public class Main {
                 System.out.println("The replicated node of file " +file.getFilename()+ " is, node with IP " +IP+ ".");
                 System.out.println(" ");
                 sendMessage(file.getFilename()); //send filename of file that's being sent
-                sendFile(IP, file.getFilename()); //
-
-                String filename = receiveMessage(); //get filename of file that's being sent
-                receiveFile(filename); //receive file
-
-                //make log
+                sendFile(IP, file.getFilename()); //send file
             }
 
         }
         //if nodes has no files stored
         else {
-            System.out.println("No files on this node, waiting for replicated files.");
-            String filename = receiveMessage();
-            receiveFile(filename);
+            while (true) {
+                System.out.println("No files on this node, waiting for replicated files.");
+                String hostname = receiveMessage();
+                String filename = receiveMessage();
+                receiveFile(filename);
+
+                //create log
+                createLog(filename, thisnode.getHostname(), hostname);
+            }
+        }
+
+        while (true) {
+            String hostname = receiveMessage(); //get hostname of sender
+            String filename = receiveMessage(); //get filename of file that's being sent
+            receiveFile(filename); //receive file
+
+            //create log
+            createLog(filename, thisnode.getHostname(), hostname);
         }
 
     }
 
-    //public static void updateLog() {
-            //String logPath = path + "\\received\\log";
+    public static void createLog(String receivePath, String thishostname, String hostname) throws IOException {
+        //extract filename from path
+        String filename = receivePath.replace("\\", " ");
+        String[] a = filename.split("nodeFiles");
+        filename = a[1];
 
-    //}
+        File file = new File(path+ "\\received\\" +filename+ "_log.txt");
+
+            if(!file.exists()) {
+                file.createNewFile();
+            }
+
+            PrintWriter pw = new PrintWriter(file);
+            pw.println("owner of the file: " +thishostname);
+            pw.println("download location: " +hostname);
+
+    }
 
     public static ArrayList<String> scanFiles() {
         try (Stream<Path> walk = Files.walk(Paths.get(path))) {
@@ -124,7 +149,7 @@ public class Main {
     public static void sendFile(String replicatedIP, String file) throws IOException {
         Socket s = new Socket(replicatedIP, 9996); //send file to replicated node
 
-        File sendFile = new File(file);   //java File not object of class File
+        File sendFile = new File(file);
         byte[] byteArray = new byte[(int)sendFile.length()];
 
         FileInputStream fis = new FileInputStream(sendFile);
