@@ -19,7 +19,7 @@ public class YClient {
     private static final int multiCastPort = 3456;
     private static final int TCPServerSendPort = 5501;
     private static final int TCPFileSendPort = 5502;
-    private static final int TCPFileReceivePort = 5500;
+    private static final int TCPFileReceivePort = 5502;
     private static final String multicastAddress = "225.6.7.8";
     private static InetAddress InetmulticastAdress;
     private static InetAddress serverAddress;
@@ -66,8 +66,6 @@ public class YClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //Replication Start
-        //replicationStart(serverAddress);
         //TCPFileHandler
         TCPFileReceiveHandler TCPFileReceive = new TCPFileReceiveHandler(TCPFileReceivePort);
         TCPFileReceive.start();
@@ -82,6 +80,7 @@ public class YClient {
                     sendUnicast(toSend, serverAddress);
                     UDPHandler.shutdown();
                     UDPMultiHandler.shutdown();
+                    TCPFileReceive.shutdown();
                     YClient.running = false;
                     break;
 
@@ -137,15 +136,16 @@ public class YClient {
                 }
                 NodeFile file = new NodeFile(iterator.next());
                 try {
-                    dataOutputStream.writeUTF(file.getFilename());
-                    System.out.println("Sending TCP: ["+serverAddress+"]: "+file.getFilename());
+                    dataOutputStream.writeUTF(hostName+","+file.getFilename()); //hostName,fileName
+                    System.out.println("Sending TCP: ["+serverAddress+"]: "+hostName+","+file.getFilename());
                     dataOutputStream.flush();
                     received = dataInputStream.readUTF();
                     System.out.println("[" + socket.getInetAddress() + "]TCP packet recieved: " + received);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                sendFile(received,file.getFilename(),hostName,file.getFilename());
+                TCPFileSendHandler TCPFileSend = new TCPFileSendHandler(received,file.getFilename(),hostName,TCPFileSendPort,file.getFilename());
+                TCPFileSend.start();
                 try {
                     socket.close();
                 } catch (IOException e) {
@@ -156,11 +156,6 @@ public class YClient {
         }else
             System.out.println("No files on this node, waiting for replicated files from other nodes...");
         System.out.println("----------------------------------------------------");
-    }
-
-    private static void sendFile(String received, String filename, String hostName, String filePath) {
-        TCPFileSendHandler TCPFileSend = new TCPFileSendHandler(received,filename,hostName,TCPFileSendPort,filePath);
-        TCPFileSend.start();
     }
 
     private static ArrayList<String> scanFiles(String fileLocation) {
@@ -184,7 +179,7 @@ public class YClient {
     }
 
     private static void sendPUT(String command, String address) throws IOException {
-        URL url = new URL("http://" + address + ":8080/" + command);
+        URL url = new URL("http://" + address + ":420/" + command);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("PUT");
         int responseCode = connection.getResponseCode();
@@ -203,7 +198,7 @@ public class YClient {
     }
 
     private static void sendGET(String command, String address) throws IOException {
-        URL url = new URL("http://" + address + ":8080/" + command);
+        URL url = new URL("http://" + address + ":420/" + command);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         int responseCode = connection.getResponseCode();
