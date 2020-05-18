@@ -61,6 +61,21 @@ public class NodeHandler {
             return String.valueOf(key);
     }
 
+    public static String getKeyWithName(String name){
+        int key = -1;
+        Iterator<Map.Entry<Integer, String> > iterator = nodes.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Integer, String> entry = iterator.next();
+            if (name.equals(entry.getValue())) {
+                key = entry.getKey();
+            }
+        }
+        if (key == -1)
+            return "Something went wrong at getKey in nodeHandler";
+        else
+            return String.valueOf(key);
+    }
+
     public static String getPrevious(String key) {
         int temp = -2147483647;
         int check = Integer.parseInt(key);

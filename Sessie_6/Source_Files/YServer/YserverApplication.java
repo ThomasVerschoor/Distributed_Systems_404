@@ -18,6 +18,10 @@ public class YserverApplication {
 
     public static void main(String[] args){
         System.out.println("----------------------------------------------------");
+        //NodeHandler.addNode("Mathijs","/192.168.12.1");
+        //NodeHandler.addNode("Bilal","/192.168.12.2");
+        //NodeHandler.addNode("Jorre","/192.168.12.3");
+        //NodeHandler.addNode("Thomas","/192.168.12.4");
         UDPServer UDP = new UDPServer(recievePort,sendPort);
         UDP.start();
         UDPMultiServer UDPM = new UDPMultiServer(multicastPort,multicastAddress,sendPort);

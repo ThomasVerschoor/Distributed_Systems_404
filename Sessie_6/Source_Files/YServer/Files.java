@@ -1,18 +1,23 @@
 package distributed.yproject.server;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 import static java.lang.StrictMath.abs;
 
 public class Files {
 
     private String filename;
-    private int nodeID;
-    private int hash;
+    private final int replicationID;
+    private final int hash;
+    private final int nodeHash;
 
-    public Files(String filename, ConcurrentHashMap<Integer, String> nodes){
+    public Files(String filename,int nodeHash, ConcurrentHashMap<Integer, String> nodes){
         this.filename = filename;
         this.hash = hashCode(); //key van file Hashmap
-        this.nodeID = setNodeID(nodes); //Key van nodes hashMap
+        this.nodeHash = nodeHash;   //key van owner
+        this.replicationID = setNodeID(nodes); //Key van replication node voor hashMap
     }
 
     public void setFilename(String filename) {
@@ -20,9 +25,7 @@ public class Files {
     }
 
     public int setNodeID(ConcurrentHashMap<Integer, String> nodes) {
-        int array[] = new int[nodes.size()];
-        int i = 0;
-        int temp = 1000000;
+        ArrayList<Integer> array = new ArrayList<Integer>();
         int temp2 = 0;
         int temp3 = 0;
 
@@ -34,23 +37,25 @@ public class Files {
             }
             //determine nodes with hash smaller than file hash
             if (key < hash) {
-                array[i] = key;
-                i++;
+                array.add(key);
             }
         }
-        //determine node with smallest difference between it's hash and file hash
-        for (int j = 0; j < array.length; j++) {
-            if ((hash - array[j]) < temp){
-                temp = (hash - array[j]);
-                temp3 = array[j];
-            }
-        }
-        //if no nodes are smaller, return biggest node
-        if (temp3 == 0){
+        System.out.println("Temp 2: [biggest node]: "+temp2);
+        //Sort array
+        Collections.sort(array);
+        System.out.println("Array of nodes smaller then filehash: "+ array);
+        //return right ID
+
+        if (array.size() == 0)
             return temp2;
-        }
         else {
-            return temp3;
+            temp3 = array.get(array.size()-1);
+            if (array.size() == 1 && temp3 == nodeHash)
+                return temp2;
+            else if (temp3 == nodeHash)
+                return array.get(array.size()-2);
+            else
+                return temp3;
         }
     }
 
@@ -62,8 +67,8 @@ public class Files {
         return hash;
     }
 
-    public int getNodeID() {
-        return nodeID;
+    public int getReplicationID() {
+        return replicationID;
     }
 
     @Override

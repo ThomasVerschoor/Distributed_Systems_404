@@ -7,8 +7,8 @@ public class FileHandler {
 
     public static ConcurrentHashMap<Integer, Files> files = new ConcurrentHashMap<Integer, Files>();
 
-    public static void addFile(String name, ConcurrentHashMap<Integer, String> nodes){
-        Files temp = new Files(name,nodes);
+    public static void addFile(String name,int nodeHash, ConcurrentHashMap<Integer, String> nodes){
+        Files temp = new Files(name,nodeHash,nodes);
         files.put(temp.getHash(),temp);
         System.out.println("Adding file to files hashMap: "+name+" with ID: "+temp.getHash());
     }
@@ -26,7 +26,7 @@ public class FileHandler {
         int id = -1;
         for (Map.Entry<Integer, Files> entry : files.entrySet()) {
             if (name.equals(entry.getValue().getFilename())) {
-                id = entry.getValue().getNodeID();
+                id = entry.getValue().getReplicationID();
             }
         }
         if (id == -1){
@@ -46,5 +46,15 @@ public class FileHandler {
             return "Something went wrong at getHash in fileHandler";
         else
             return String.valueOf(hash);
+    }
+
+    public static int getReplicationID(String name){
+        int id = -1;
+        for (Map.Entry<Integer, Files> entry : files.entrySet()) {
+            if (name.equals(entry.getValue().getFilename())) {
+                id = entry.getValue().getReplicationID();
+            }
+        }
+        return id;
     }
 }

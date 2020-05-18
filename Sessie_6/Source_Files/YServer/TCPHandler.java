@@ -5,6 +5,8 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.util.Objects;
 
+import static java.lang.StrictMath.abs;
+
 public class TCPHandler extends Thread{
 
     private static Socket socket;
@@ -51,11 +53,13 @@ public class TCPHandler extends Thread{
     }
 
     private void send(String message) {
-        FileHandler.addFile(message,NodeHandler.nodes);
-        String ID = NodeHandler.getPrevious(FileHandler.getHash(message));//TEST
-        String IP = NodeHandler.nodes.get(ID);//TEST
-        //String IP = FileHandler.getIP(message,NodeHandler.nodes); PREVIOUS
-        System.out.println("["+TCPHandler.currentThread().getId()+" | "+TCPHandler.currentThread().getName()+"] The replicated node of file " +FileHandler.getHash(message)+ " is node with IP: " +IP+ ".");
+        //message = hostName,fileName
+        int index = message.indexOf(",");
+        String hostName = message.substring(0,index);
+        String fileName = message.substring(index+1);
+        FileHandler.addFile(fileName,hashCode(hostName),NodeHandler.nodes);
+        String IP = NodeHandler.nodes.get(FileHandler.getReplicationID(fileName));
+        System.out.println("["+TCPHandler.currentThread().getId()+" | "+TCPHandler.currentThread().getName()+"] The replicated node of file " +FileHandler.getHash(fileName)+ " is node with IP: " +IP+ ".");
         System.out.println("["+TCPHandler.currentThread().getId()+" | "+TCPHandler.currentThread().getName()+"] Sending TCP: ["+hostAddress+"]: "+IP);
         OutputStream outputStream = null;
         try {
@@ -86,4 +90,14 @@ public class TCPHandler extends Thread{
         System.out.println(" ");
         running = false;
     }
+
+    public int hashCode(String name) {
+        long max = 2147483647;
+        long min = -2147483647;
+
+        double result = (name.hashCode()+max)*(327680d/(max+abs(min)));
+
+        return (int) result;
+    }
+
 }
