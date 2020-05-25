@@ -1,0 +1,594 @@
+mei 26, 2020 1:50:33 A.M. UDPReceiveHandler <init>
+INFO: [1 | main] Starting UDPRecieve handler listening on port: 4499
+mei 26, 2020 1:50:33 A.M. UDPReceiveHandler <init>
+INFO: [1 | main] Trying to create UDP UNICAST Socket..
+mei 26, 2020 1:50:33 A.M. UDPReceiveHandler <init>
+INFO: [1 | main] Done creating UDP UNICAST Socket...
+mei 26, 2020 1:50:33 A.M. UDPReceiveHandler run
+INFO: [14 | Thread-0] ID and name of UDP UNICAST Thread
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler <init>
+INFO: [1 | main] Starting UDP MULTICAST listener on port: 3456 with address: /225.6.7.8
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler <init>
+INFO: [1 | main] Trying to create UDP MULTICAST Socket...
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler <init>
+INFO: [1 | main] Done creating UDP MULTICAST Socket...
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler <init>
+INFO: [1 | main] Trying to join MULTICAST Group...
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler <init>
+INFO: [1 | main] Done joining MULTICAST Group...
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler run
+INFO: [15 | Thread-1] ID and name of UDP MULTICAST Thread
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler <init>
+INFO: Starting TCPFile listener on port: 5502
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler <init>
+INFO: [1 | main] Trying to create TCPFileReceive Socket...
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler <init>
+INFO: [1 | main] Done creating TCPFileReceive Socket...
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] ID and name of TCPFileReceive Thread
+mei 26, 2020 1:50:33 A.M. TCPReplicatedFileReceiveHandler <init>
+INFO: [1 | main] Starting TCPReplicatedFile listener on port: 5503
+mei 26, 2020 1:50:33 A.M. TCPReplicatedFileReceiveHandler <init>
+INFO: [1 | main] Trying to create TCPReplicatedFileReceive Socket...
+mei 26, 2020 1:50:33 A.M. TCPReplicatedFileReceiveHandler <init>
+INFO: [1 | main] Done creating TCPReplicatedFileReceive Socket...
+mei 26, 2020 1:50:33 A.M. YClient sendMultiCast
+INFO: [MAIN] Sending multicast: [/225.6.7.8]: Start,dfqqfsd
+mei 26, 2020 1:50:33 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] ID and name of TCPReplicatedFileReceive Thread
+mei 26, 2020 1:50:33 A.M. UDPMultiReceiveHandler run
+INFO: [15 | Thread-1] MULTICAST detected!
+mei 26, 2020 1:50:33 A.M. TimedUpdates run
+INFO: [18 | Thread-4] starting replication filecheck Thread
+mei 26, 2020 1:50:33 A.M. TimedUpdates updateFiles
+INFO: [18 | Thread-4] Filecheck Thread detected a change in nodeFiles
+mei 26, 2020 1:50:33 A.M. TimedUpdates changes
+INFO: [18 | Thread-4] Client added file(s): AYLMAO.txt
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] Sending TCP: [/127.0.0.1]: dfqqfsd,AYLMAO.txt
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] [/127.0.0.1]TCP packet recieved: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] Requesting thread to send file: AYLMAO.txt to destination: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] closing I/O streams and socket with address: /127.0.0.1 on port: 5501
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:33 A.M. TimedUpdates changes
+INFO: [18 | Thread-4] Client added file(s): test1.txt
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Created thread to send replicated file 'AYLMAO.txt' located at: 'C:\Users\mathi\Desktop\Source_Code\Projecten\YClient\nodeFiles\AYLMAO.txt' to: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] Sending TCP: [/127.0.0.1]: dfqqfsd,test1.txt
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Trying to initialize I/O Streams to send file...
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] TCPFileReceive connection detected!
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Done trying to initialize I/O Streams to send file...
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] Requesting thread to handle receive file
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Sending hostname: dfqqfsd, filename: AYLMAO.txt and filesize: 20
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] [/127.0.0.1]TCP packet recieved: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] Requesting thread to send file: test1.txt to destination: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] closing I/O streams and socket with address: /127.0.0.1 on port: 5501
+mei 26, 2020 1:50:33 A.M. TimedUpdates changes
+INFO: [18 | Thread-4] Client added file(s): test3.docx
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] Sending TCP: [/127.0.0.1]: dfqqfsd,test3.docx
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] ID and name of TCPGetFile Thread
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Created thread to receive replicated file
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Created thread to send replicated file 'test1.txt' located at: 'C:\Users\mathi\Desktop\Source_Code\Projecten\YClient\nodeFiles\test1.txt' to: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] [/127.0.0.1]TCP packet recieved: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] Requesting thread to send file: test3.docx to destination: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:33 A.M. YClient replicateFile
+INFO: [MAIN] closing I/O streams and socket with address: /127.0.0.1 on port: 5501
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Trying to initialize I/O Streams to send file...
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Trying to receive hostname/filename/filesize
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Created thread to send replicated file 'test3.docx' located at: 'C:\Users\mathi\Desktop\Source_Code\Projecten\YClient\nodeFiles\test3.docx' to: /192.168.151.18
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Done trying to initialize I/O Streams to send file...
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] TCPFileReceive connection detected!
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Sending hostname: dfqqfsd, filename: test1.txt and filesize: 7
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Trying to initialize I/O Streams to send file...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Succesfully got hostname: dfqqfsd ,filename: AYLMAO.txt and filesize: 20 ,sending ACK
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] Requesting thread to handle receive file
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Received: ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Sending file AYLMAO.txt
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] TCPFileReceive connection detected!
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] receiving file AYLMAO.txt
+mei 26, 2020 1:50:33 A.M. TCPFileReceiveHandler run
+INFO: [16 | Thread-2] Requesting thread to handle receive file
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] ID and name of TCPGetFile Thread
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Created thread to receive replicated file
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Done trying to initialize I/O Streams to send file...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Done reading AYLMAO.txt, writing to receivedFile location
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] ID and name of TCPGetFile Thread
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Received: ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [19 | Thread-5] Node sends ACK, received file correctly...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Sending hostname: dfqqfsd, filename: test3.docx and filesize: 11912
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Trying to receive hostname/filename/filesize
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler close
+INFO: [19 | Thread-5] Shutting down getFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Succesfully received file AYLMAO.txt ,sending ACK
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Created thread to receive replicated file
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Trying to create log file for downloaded file: AYLMAO.txt
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Succesfully got hostname: dfqqfsd ,filename: test1.txt and filesize: 7 ,sending ACK
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [20 | Thread-6] Successfully created log file for downloaded file: AYLMAO.txt
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] receiving file test1.txt
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Received: ACK
+mei 26, 2020 1:50:33 A.M. TCPGetFile exit
+INFO: [20 | Thread-6] Shutting down getFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Sending file test1.txt
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Done reading test1.txt, writing to receivedFile location
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Trying to receive hostname/filename/filesize
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Succesfully received file test1.txt ,sending ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Received: ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [21 | Thread-7] Node sends ACK, received file correctly...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Succesfully got hostname: dfqqfsd ,filename: test3.docx and filesize: 11912 ,sending ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler close
+INFO: [21 | Thread-7] Shutting down getFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Trying to create log file for downloaded file: test1.txt
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] receiving file test3.docx
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Received: ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Sending file test3.docx
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [23 | Thread-9] Successfully created log file for downloaded file: test1.txt
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Done reading test3.docx, writing to receivedFile location
+mei 26, 2020 1:50:33 A.M. TCPGetFile exit
+INFO: [23 | Thread-9] Shutting down getFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Received: ACK
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler run
+INFO: [22 | Thread-8] Node sends ACK, received file correctly...
+mei 26, 2020 1:50:33 A.M. TCPFileSendHandler close
+INFO: [22 | Thread-8] Shutting down getFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Succesfully received file test3.docx ,sending ACK
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Trying to create log file for downloaded file: test3.docx
+mei 26, 2020 1:50:33 A.M. TCPGetFile run
+INFO: [24 | Thread-10] Successfully created log file for downloaded file: test3.docx
+mei 26, 2020 1:50:33 A.M. TCPGetFile exit
+INFO: [24 | Thread-10] Shutting down getFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:45 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getPreviousNode/284693
+mei 26, 2020 1:50:45 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getIP/169314
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getIP/284693
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Created thread to send replicated file 'AYLMAO.txt' and his log file 'AYLMAO.log' to: /192.168.151.18
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Trying to initialize I/O Streams to send replicated file and it's log file...
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getPreviousNode/284693
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] TCPReplicatedFileReceive connection detected!
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] Requesting thread to handle receive file and its log file
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Created thread to send replicated file 'AYLMAOshut.txt' and his log file 'AYLMAOshut.log' to: /192.168.151.18
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getIP/169314
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Trying to initialize I/O Streams to send replicated file and it's log file...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Sending hostname: dfqqfsd, filename: AYLMAO.txt, filesize: 20, logFileName: AYLMAO.log, logFileSize: 10
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] TCPReplicatedFileReceive connection detected!
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] Requesting thread to handle receive file and its log file
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Sending hostname: dfqqfsd, filename: AYLMAOshut.txt, filesize: 20, logFileName: AYLMAOshut.log, logFileSize: 14
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getIP/284693
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getPreviousNode/284693
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getIP/169314
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] ID and name of TCPGetReplicatedFile Thread
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Created thread to receive replicated file and its log
+mei 26, 2020 1:50:46 A.M. YClient sendGET
+INFO: [MAIN] Sending HTTP GET to YServer: http://127.0.0.1:420/getIP/284693
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Created thread to send replicated file 'test1.txt' and his log file 'test1.log' to: /192.168.151.18
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Trying to initialize I/O Streams to send replicated file and it's log file...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] TCPReplicatedFileReceive connection detected!
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] Requesting thread to handle receive file and its log file
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] ID and name of TCPGetReplicatedFile Thread
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Created thread to receive replicated file and its log
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Created thread to send replicated file 'test1shut.txt' and his log file 'test1shut.log' to: /192.168.151.18
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Created thread to send replicated file 'test3.docx' and his log file 'test3.log' to: /192.168.151.18
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] ID and name of TCPFileSend Thread
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Sending hostname: dfqqfsd, filename: test1.txt, filesize: 7, logFileName: test1.log, logFileSize: 9
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] ID and name of TCPGetReplicatedFile Thread
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Trying to receive hostname/filename/filesize/logFileName/logFileSize
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Created thread to send replicated file 'test3shut.docx' and his log file 'test3shut.log' to: /192.168.151.18
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Trying to initialize I/O Streams to send replicated file and it's log file...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Trying to initialize I/O Streams to send replicated file and it's log file...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] TCPReplicatedFileReceive connection detected!
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Trying to receive hostname/filename/filesize/logFileName/logFileSize
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Trying to initialize I/O Streams to send replicated file and it's log file...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Succesfully got hostname: dfqqfsd ,filename: AYLMAOshutshut.txt ,filesize: 20,logFileName: AYLMAOshutshut.log,logFileSize: 56 ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Created thread to receive replicated file and its log
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Sending hostname: dfqqfsd, filename: test1shut.txt, filesize: 7, logFileName: test1shut.log, logFileSize: 13
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] receiving file AYLMAOshutshut.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Sending hostname: dfqqfsd, filename: test3.docx, filesize: 11912, logFileName: test3.log, logFileSize: 9
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Succesfully got hostname: dfqqfsd ,filename: AYLMAOshut.txt ,filesize: 20,logFileName: AYLMAOshut.log,logFileSize: 56 ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] Requesting thread to handle receive file and its log file
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] receiving file AYLMAOshut.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Node sends ACK, received hostName, fileName, fileSize, logFileName and logFileSize correctly
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Sending hostname: dfqqfsd, filename: test3shut.docx, filesize: 11912, logFileName: test3shut.log, logFileSize: 13
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Sending file : AYLMAOshut.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Node sends ACK, received hostName, fileName, fileSize, logFileName and logFileSize correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] ID and name of TCPGetReplicatedFile Thread
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] TCPReplicatedFileReceive connection detected!
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Created thread to receive replicated file and its log
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Sending file : AYLMAO.txt
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Done reading AYLMAOshutshut.txt, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Succesfully received file AYLMAOshutshut.txt ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Done reading AYLMAOshut.txt, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] Requesting thread to handle receive file and its log file
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Succesfully received file AYLMAOshut.txt ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] receiving log file AYLMAOshutshut.log
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Node sends ACK, received replicated file AYLMAOshut.txt correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Done reading AYLMAOshutshut.log, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Trying to receive hostname/filename/filesize/logFileName/logFileSize
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [29 | Thread-14] Succesfully received file AYLMAOshutshut.log ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Node sends ACK, received replicated file AYLMAO.txt correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] receiving log file AYLMAOshut.log
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] ID and name of TCPGetReplicatedFile Thread
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Created thread to receive replicated file and its log
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Trying to receive hostname/filename/filesize/logFileName/logFileSize
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] TCPReplicatedFileReceive connection detected!
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Succesfully got hostname: dfqqfsd ,filename: test3shut.docx ,filesize: 11912,logFileName: test3shut.log,logFileSize: 56 ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile exit
+INFO: [29 | Thread-14] Shutting down getReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [27 | Thread-12] Node sends ACK, received replicated log file AYLMAOshut.log correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Succesfully got hostname: dfqqfsd ,filename: test1shut.txt ,filesize: 7,logFileName: test1shut.log,logFileSize: 56 ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [27 | Thread-12] Shutting down sendReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Trying to receive hostname/filename/filesize/logFileName/logFileSize
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] receiving file test3shut.docx
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Done reading AYLMAOshut.log, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileReceiveHandler run
+INFO: [17 | Thread-3] Requesting thread to handle receive file and its log file
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [28 | Thread-13] Succesfully received file AYLMAOshut.log ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Node sends ACK, received hostName, fileName, fileSize, logFileName and logFileSize correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Succesfully got hostname: dfqqfsd ,filename: test1shutshut.txt ,filesize: 7,logFileName: test1shutshut.log,logFileSize: 56 ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [27 | Thread-12] Done trying to initialize I/O Streams to send ...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] receiving file test1shut.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Node sends ACK, received hostName, fileName, fileSize, logFileName and logFileSize correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] receiving file test1shutshut.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Sending file : test3.docx
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] ID and name of TCPGetReplicatedFile Thread
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [26 | Thread-11] Node sends ACK, received replicated log file AYLMAO.log correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile exit
+INFO: [28 | Thread-13] Shutting down getReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [26 | Thread-11] Shutting down sendReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Created thread to receive replicated file and its log
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Done reading test3shut.docx, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Node sends ACK, received hostName, fileName, fileSize, logFileName and logFileSize correctly
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Sending file : test1shut.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Sending file : test1.txt
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Node sends ACK, received replicated file test3.docx correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Done reading test1shutshut.txt, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Succesfully received file test3shut.docx ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [26 | Thread-11] Done trying to initialize I/O Streams to send ...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Done trying to initialize I/O Streams...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] receiving log file test3shut.log
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Succesfully received file test1shutshut.txt ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Done reading test1shut.txt, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] receiving log file test1shutshut.log
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Done reading test3shut.log, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Node sends ACK, received replicated file test1shut.txt correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Done reading test1shutshut.log, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Trying to receive hostname/filename/filesize/logFileName/logFileSize
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [36 | Thread-21] Succesfully received file test1shutshut.log ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [35 | Thread-20] Succesfully received file test3shut.log ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Succesfully received file test1shut.txt ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Node sends ACK, received replicated file test1.txt correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile exit
+INFO: [35 | Thread-20] Shutting down getReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [32 | Thread-17] Node sends ACK, received replicated log file test3.log correctly
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [32 | Thread-17] Shutting down sendReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [32 | Thread-17] Done trying to initialize I/O Streams to send ...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [31 | Thread-16] Node sends ACK, received replicated log file test1shut.log correctly
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [31 | Thread-16] Shutting down sendReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [31 | Thread-16] Done trying to initialize I/O Streams to send ...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile exit
+INFO: [36 | Thread-21] Shutting down getReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Succesfully got hostname: dfqqfsd ,filename: test3shutshut.docx ,filesize: 11912,logFileName: test3shutshut.log,logFileSize: 56 ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] receiving log file test1shut.log
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Node sends ACK, received hostName, fileName, fileSize, logFileName and logFileSize correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Done reading test1shut.log, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [33 | Thread-18] Succesfully received file test1shut.log ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile exit
+INFO: [33 | Thread-18] Shutting down getReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] receiving file test3shutshut.docx
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Sending file : test3shut.docx
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [30 | Thread-15] Node sends ACK, received replicated log file test1.log correctly
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [30 | Thread-15] Shutting down sendReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [30 | Thread-15] Done trying to initialize I/O Streams to send ...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Done reading test3shutshut.docx, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Succesfully received file test3shutshut.docx ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] receiving log file test3shutshut.log
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Node sends ACK, received replicated file test3shut.docx correctly
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Done reading test3shutshut.log, writing to receivedFile location
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Received: ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler run
+INFO: [34 | Thread-19] Node sends ACK, received replicated log file test3shut.log correctly
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [34 | Thread-19] Shutting down sendReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile run
+INFO: [37 | Thread-22] Succesfully received file test3shutshut.log ,sending ACK
+mei 26, 2020 1:50:46 A.M. TCPReplicatedFileSendHandler close
+INFO: [34 | Thread-19] Done trying to initialize I/O Streams to send ...
+mei 26, 2020 1:50:46 A.M. TCPGetReplicatedFile exit
+INFO: [37 | Thread-22] Shutting down getReplicatedFile Thread, cleaning up I/O streams and closing socket...
+mei 26, 2020 1:50:56 A.M. YClient sendUnicast
+INFO: [MAIN] Sending unicast: [/127.0.0.1]: Exit,Curr: 284693,Prev: 284693,Next: 284693
+mei 26, 2020 1:50:56 A.M. UDPReceiveHandler shutdown
+INFO: [1 | main] Quiting UDPRecieve handler...
+mei 26, 2020 1:50:56 A.M. UDPReceiveHandler shutdown
+INFO: [1 | main] Closing UNICAST socket
+mei 26, 2020 1:50:56 A.M. UDPReceiveHandler run
+SEVERE: [14 | Thread-0] Something went wrong while waiting for UNICAST,it could be that client exited and socket was closed!
+mei 26, 2020 1:50:56 A.M. UDPReceiveHandler onDataReceived
+INFO: [14 | Thread-0] UNI[null]UDP packet received: 
+mei 26, 2020 1:50:56 A.M. UDPMultiReceiveHandler shutdown
+INFO: [1 | main] closing MULTICAST socket
+mei 26, 2020 1:50:56 A.M. TCPFileReceiveHandler shutdown
+INFO: [1 | main] Closing TCPFileReceive Socket
+mei 26, 2020 1:50:56 A.M. UDPMultiReceiveHandler run
+SEVERE: [15 | Thread-1] Something went wrong while waiting for MULTICAST,it could be that client exited and socket was closed!
+mei 26, 2020 1:50:56 A.M. UDPMultiReceiveHandler onDataReceived
+INFO: [15 | Thread-1] MULTI[null]UDP packet received: 
+mei 26, 2020 1:50:56 A.M. TCPFileReceiveHandler run
+SEVERE: [16 | Thread-2] Something went wrong while waiting for TCPFileReceive connection, it could be that client exited and socket was closed!
+mei 26, 2020 1:50:56 A.M. TCPReplicatedFileReceiveHandler shutdown
+INFO: [1 | main] Closing TCPReplicatedFileReceive Socket
